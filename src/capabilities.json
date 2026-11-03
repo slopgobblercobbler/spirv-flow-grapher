@@ -1,0 +1,18 @@
+{
+  "Matrix": 0,
+  "Shader": 1,
+  "Geometry": 2,
+  "Tessellation": 3,
+  "Addresses": 4,
+  "Linkage": 5,
+  "Kernel": 6,
+  "Vector16": 7,
+  "Float16Buffer": 8,
+  "Float16": 9,
+  "Float64": 10,
+  "Int64": 11,
+  "Int64Atomics": 12,
+  "ImageBasic": 13,
+  "ImageReadWrite": 14,
+  "ImageMipmapped": 15
+}
