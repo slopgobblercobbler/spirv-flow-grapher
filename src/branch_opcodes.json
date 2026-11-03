@@ -1,0 +1,37 @@
+{
+  "OpBranch": {
+    "opcode": 249,
+    "class": "Branch",
+    "hasCondition": false
+  },
+  "OpBranchConditional": {
+    "opcode": 250,
+    "class": "BranchConditional",
+    "hasCondition": true
+  },
+  "OpSwitch": {
+    "opcode": 251,
+    "class": "Switch",
+    "hasCondition": true
+  },
+  "OpKill": {
+    "opcode": 252,
+    "class": "Termination",
+    "hasCondition": false
+  },
+  "OpReturn": {
+    "opcode": 253,
+    "class": "Termination",
+    "hasCondition": false
+  },
+  "OpReturnValue": {
+    "opcode": 254,
+    "class": "Termination",
+    "hasCondition": false
+  },
+  "OpUnreachable": {
+    "opcode": 255,
+    "class": "Termination",
+    "hasCondition": false
+  }
+}
