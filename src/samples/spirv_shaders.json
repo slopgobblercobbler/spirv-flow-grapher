@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Nested While Loop with Early Break",
+    "opcodeCount": 38,
+    "blockCount": 6,
+    "description": "Demonstrates structured control flow with inner and outer OpLoopMerge headers and loop-exit merge points",
+    "disassembly": "%bb_entry = OpLabel\nOpBranch %bb_outer_header\n%bb_outer_header = OpLabel\nOpLoopMerge %bb_outer_merge %bb_outer_continue None\nOpBranchConditional %cond_outer %bb_inner_header %bb_outer_merge\n%bb_inner_header = OpLabel\nOpLoopMerge %bb_inner_merge %bb_inner_continue None\nOpBranchConditional %cond_inner %bb_inner_body %bb_inner_merge\n%bb_inner_body = OpLabel\nOpBranch %bb_inner_continue\n%bb_inner_continue = OpLabel\nOpBranch %bb_inner_header\n%bb_inner_merge = OpLabel\nOpBranch %bb_outer_continue\n%bb_outer_continue = OpLabel\nOpBranch %bb_outer_header\n%bb_outer_merge = OpLabel\nOpReturn"
+  },
+  {
+    "title": "SSA Phi Join from Multi-Way Branch",
+    "opcodeCount": 24,
+    "blockCount": 4,
+    "description": "Illustrates OpPhi node resolving divergent value definitions across conditional branches prior to function return",
+    "disassembly": "%bb_entry = OpLabel\nOpSelectionMerge %bb_join None\nOpBranchConditional %cond %bb_then %bb_else\n%bb_then = OpLabel\n%val_then = OpFMul %float %a %b\nOpBranch %bb_join\n%bb_else = OpLabel\n%val_else = OpFAdd %float %a %b\nOpBranch %bb_join\n%bb_join = OpLabel\n%res = OpPhi %float %val_then %bb_then %val_else %bb_else\nOpReturnValue %res"
+  }
+]
