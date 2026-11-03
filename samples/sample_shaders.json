@@ -1,0 +1,58 @@
+{
+  "simple_branch": {
+    "blocks": [
+      {
+        "id": 1,
+        "successors": [
+          2,
+          3
+        ]
+      },
+      {
+        "id": 2,
+        "successors": [
+          4
+        ]
+      },
+      {
+        "id": 3,
+        "successors": [
+          4
+        ]
+      },
+      {
+        "id": 4,
+        "successors": []
+      }
+    ]
+  },
+  "loop_with_break": {
+    "blocks": [
+      {
+        "id": 10,
+        "successors": [
+          11
+        ]
+      },
+      {
+        "id": 11,
+        "successors": [
+          12,
+          13
+        ],
+        "mergeBlockId": 13,
+        "continueTargetId": 12
+      },
+      {
+        "id": 12,
+        "successors": [
+          11
+        ]
+      },
+      {
+        "id": 13,
+        "successors": []
+      }
+    ]
+  }
+}
