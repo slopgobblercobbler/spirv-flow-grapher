@@ -1,0 +1,45 @@
+/* Custom styles for SPIR-V Flow Grapher */
+
+body {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Custom scrollbar for dark mode */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0b0f19;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1f2937;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #374151;
+}
+
+/* Graph Node Styles */
+.block-node {
+    cursor: pointer;
+    transition: filter 0.15s ease;
+}
+
+.block-node:hover {
+    filter: brightness(1.15);
+}
+
+.block-node.selected rect.bg-rect {
+    stroke: #3b82f6 !important;
+    stroke-width: 2.5px !important;
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
+}
+
+/* Smooth transitions */
+#sidebar {
+    transition: width 0.2s ease, transform 0.2s ease;
+}

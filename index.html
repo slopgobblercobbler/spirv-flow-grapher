@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIR-V Control Flow Grapher</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS for modern developer UI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#0b0f19',
+                            800: '#111827',
+                            700: '#1f2937',
+                            600: '#374151',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-dark-900 text-gray-100 min-h-screen flex flex-col font-sans select-none overflow-hidden">
+
+    <!-- Top Navigation Bar -->
+    <header class="bg-dark-800 border-b border-dark-700 h-14 px-4 flex items-center justify-between shrink-0 z-20">
+        <div class="flex items-center space-x-3">
+            <div class="bg-blue-600 p-2 rounded-lg text-white shadow-lg shadow-blue-500/30">
+                <i data-lucide="git-fork" class="w-5 h-5"></i>
+            </div>
+            <div>
+                <h1 class="font-bold text-base tracking-wide text-white flex items-center gap-2">
+                    SPIR-V Flow Grapher 
+                    <span class="text-xs px-2 py-0.5 bg-blue-900/60 text-blue-300 border border-blue-700/50 rounded-full font-mono">v1.0.0</span>
+                </h1>
+                <p class="text-xs text-gray-400">Client-Side Control Flow Graph & Disassembly Analyzer</p>
+            </div>
+        </div>
+
+        <div class="flex items-center space-x-3">
+            <!-- Sample Presets Dropdown -->
+            <div class="relative group">
+                <button class="flex items-center space-x-2 bg-dark-700 hover:bg-dark-600 text-gray-200 text-sm px-3 py-1.5 rounded-md border border-dark-600 transition shadow-sm">
+                    <i data-lucide="box" class="w-4 h-4 text-blue-400"></i>
+                    <span>Load Sample</span>
+                    <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-gray-400"></i>
+                </button>
+                <div class="absolute right-0 mt-1 w-52 bg-dark-800 border border-dark-700 rounded-lg shadow-xl hidden group-hover:block z-50 py-1">
+                    <button onclick="loadSample('vertex')" class="w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-dark-700 hover:text-white flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-purple-500"></span> Vertex Shader (Branch)
+                    </button>
+                    <button onclick="loadSample('fragment')" class="w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-dark-700 hover:text-white flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Fragment Shader (Discard)
+                    </button>
+                    <button onclick="loadSample('compute')" class="w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-dark-700 hover:text-white flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-amber-500"></span> Compute Shader (Loop)
+                    </button>
+                </div>
+            </div>
+
+            <!-- File Upload Button -->
+            <label class="flex items-center space-x-2 bg-blue-600 hover:bg-blue-500 text-white text-sm px-3.5 py-1.5 rounded-md cursor-pointer transition shadow-lg shadow-blue-600/20 font-medium">
+                <i data-lucide="upload" class="w-4 h-4"></i>
+                <span>Open SPIR-V / Text</span>
+                <input type="file" id="fileInput" accept=".spv,.txt,.asm" class="hidden">
+            </label>
+
+            <div class="h-5 w-px bg-dark-700"></div>
+
+            <!-- GitHub Link -->
+            <a href="https://github.com/slopgobblercobbler/spirv-flow-grapher" target="_blank" class="p-2 text-gray-400 hover:text-white hover:bg-dark-700 rounded-md transition" title="View Source on GitHub">
+                <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Workspace Layout -->
+    <div class="flex-1 flex overflow-hidden relative">
+
+        <!-- Left Sidebar: Disassembly & Parser Source -->
+        <div id="sidebar" class="w-[420px] bg-dark-800 border-r border-dark-700 flex flex-col shrink-0 transition-all duration-300 relative z-10">
+            <div class="flex items-center justify-between px-4 py-2.5 bg-dark-800/80 border-b border-dark-700">
+                <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 flex items-center gap-1.5">
+                    <i data-lucide="code" class="w-3.5 h-3.5 text-blue-400"></i> SPIR-V Disassembly / Source
+                </span>
+                <div class="flex items-center space-x-1">
+                    <button onclick="compileAndRender()" class="bg-blue-600 hover:bg-blue-500 text-white text-xs px-2.5 py-1 rounded font-medium flex items-center gap-1 transition shadow">
+                        <i data-lucide="play" class="w-3 h-3"></i> Parse & Graph
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex-1 relative flex flex-col">
+                <textarea id="sourceEditor" class="w-full h-full bg-dark-900 text-gray-200 font-mono text-xs p-3 resize-none focus:outline-none leading-relaxed selection:bg-blue-600 selection:text-white" spellcheck="false"></textarea>
+            </div>
+
+            <!-- Stats Footer Inside Sidebar -->
+            <div class="p-3 bg-dark-800 border-t border-dark-700 text-xs text-gray-400 grid grid-cols-3 gap-2 text-center">
+                <div class="bg-dark-900/60 p-1.5 rounded border border-dark-700">
+                    <div class="text-gray-500 text-[10px] uppercase">Blocks</div>
+                    <div id="statBlocks" class="font-mono text-white font-bold text-sm">0</div>
+                </div>
+                <div class="bg-dark-900/60 p-1.5 rounded border border-dark-700">
+                    <div class="text-gray-500 text-[10px] uppercase">Edges</div>
+                    <div id="statEdges" class="font-mono text-white font-bold text-sm">0</div>
+                </div>
+                <div class="bg-dark-900/60 p-1.5 rounded border border-dark-700">
+                    <div class="text-gray-500 text-[10px] uppercase">Phis</div>
+                    <div id="statPhis" class="font-mono text-white font-bold text-sm">0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toggle Sidebar Button -->
+        <button id="toggleSidebar" onclick="toggleSidebar()" class="absolute left-[420px] top-4 bg-dark-800 border border-dark-700 text-gray-400 hover:text-white p-1 rounded-r-md z-30 shadow-md transition-all">
+            <i data-lucide="chevron-left" class="w-4 h-4" id="toggleIcon"></i>
+        </button>
+
+        <!-- Center: Interactive Control Flow Graph Canvas / SVG -->
+        <div class="flex-1 bg-dark-900 relative overflow-hidden flex flex-col" id="graphContainer">
+            
+            <!-- Floating Graph Controls Toolbar -->
+            <div class="absolute top-4 right-4 bg-dark-800/90 backdrop-blur border border-dark-700 rounded-lg shadow-2xl p-1.5 flex items-center space-x-1 z-20">
+                <button onclick="resetZoom()" class="p-2 hover:bg-dark-700 text-gray-300 hover:text-white rounded transition" title="Reset View">
+                    <i data-lucide="maximize-2" class="w-4 h-4"></i>
+                </button>
+                <button onclick="zoomIn()" class="p-2 hover:bg-dark-700 text-gray-300 hover:text-white rounded transition" title="Zoom In">
+                    <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                </button>
+                <button onclick="zoomOut()" class="p-2 hover:bg-dark-700 text-gray-300 hover:text-white rounded transition" title="Zoom Out">
+                    <i data-lucide="zoom-out" class="w-4 h-4"></i>
+                </button>
+                <div class="h-4 w-px bg-dark-700 mx-1"></div>
+                <button onclick="autoLayout()" class="flex items-center space-x-1 px-2.5 py-1.5 hover:bg-dark-700 text-gray-300 hover:text-white rounded text-xs font-medium transition">
+                    <i data-lucide="layout" class="w-4 h-4 text-blue-400"></i>
+                    <span>Relayout</span>
+                </button>
+            </div>
+
+            <!-- SVG Graph Viewport -->
+            <svg id="cfgSvg" class="w-full h-full cursor-grab active:cursor-grabbing">
+                <defs>
+                    <!-- Arrowheads -->
+                    <marker id="arrow-normal" viewBox="0 0 10 10" refX="22" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"></path>
+                    </marker>
+                    <marker id="arrow-true" viewBox="0 0 10 10" refX="22" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#10b981"></path>
+                    </marker>
+                    <marker id="arrow-false" viewBox="0 0 10 10" refX="22" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444"></path>
+                    </marker>
+                    <marker id="arrow-loop" viewBox="0 0 10 10" refX="22" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"></path>
+                    </marker>
+                </defs>
+                <g id="viewport">
+                    <g id="edgesLayer"></g>
+                    <g id="nodesLayer"></g>
+                </g>
+            </svg>
+
+            <!-- Floating Legend -->
+            <div class="absolute bottom-4 left-4 bg-dark-800/90 backdrop-blur border border-dark-700 rounded-lg p-3 text-xs space-y-1.5 shadow-xl z-20 pointer-events-none">
+                <div class="font-semibold text-gray-300 mb-1 flex items-center gap-1.5">
+                    <i data-lucide="info" class="w-3.5 h-3.5 text-blue-400"></i> Edge Legend
+                </div>
+                <div class="flex items-center gap-2 text-gray-400">
+                    <span class="w-3 h-0.5 bg-emerald-500 inline-block"></i></span> True / Merge Branch
+                </div>
+                <div class="flex items-center gap-2 text-gray-400">
+                    <span class="w-3 h-0.5 bg-rose-500 inline-block"></span> False Branch
+                </div>
+                <div class="flex items-center gap-2 text-gray-400">
+                    <span class="w-3 h-0.5 bg-amber-500 inline-block"></span> Loop Backedge
+                </div>
+                <div class="flex items-center gap-2 text-gray-400">
+                    <span class="w-3 h-0.5 bg-gray-500 inline-block"></span> Unconditional / Fallthrough
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Inspector Sidebar -->
+        <div id="inspector" class="w-[380px] bg-dark-800 border-l border-dark-700 flex flex-col shrink-0 z-10">
+            <div class="px-4 py-3 bg-dark-800/80 border-b border-dark-700 flex items-center justify-between">
+                <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 flex items-center gap-1.5">
+                    <i data-lucide="cpu" class="w-3.5 h-3.5 text-blue-400"></i> Basic Block Inspector
+                </span>
+                <span id="inspectBlockId" class="font-mono text-xs px-2 py-0.5 bg-dark-700 text-blue-300 rounded border border-dark-600">No selection</span>
+            </div>
+
+            <div class="flex-1 p-4 overflow-y-auto space-y-4" id="inspectorContent">
+                <div class="text-center py-16 text-gray-500">
+                    <i data-lucide="mouse-pointer-click" class="w-8 h-8 mx-auto mb-2 opacity-50"></i>
+                    <p class="text-sm">Click any basic block in the graph to inspect its SPIR-V instructions, phis, and control flow attributes.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Application Script -->
+    <script src="app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
