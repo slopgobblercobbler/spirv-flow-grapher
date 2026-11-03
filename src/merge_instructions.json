@@ -1,0 +1,17 @@
+{
+  "OpLoopMerge": {
+    "opcode": 246,
+    "operands": [
+      "MergeBlock",
+      "ContinueTarget",
+      "LoopControl"
+    ]
+  },
+  "OpSelectionMerge": {
+    "opcode": 247,
+    "operands": [
+      "MergeBlock",
+      "SelectionControl"
+    ]
+  }
+}
