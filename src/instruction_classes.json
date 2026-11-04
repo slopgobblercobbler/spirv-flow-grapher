@@ -1,0 +1,11 @@
+{
+  "OpConstant": "Constants",
+  "OpVariable": "Memory",
+  "OpLoad": "Memory",
+  "OpStore": "Memory",
+  "OpFunctionCall": "Function",
+  "OpBranchConditional": "ControlFlow",
+  "OpSwitch": "ControlFlow",
+  "OpReturn": "ControlFlow",
+  "OpReturnValue": "ControlFlow"
+}
