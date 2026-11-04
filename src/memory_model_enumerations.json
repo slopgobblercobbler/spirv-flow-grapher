@@ -1,0 +1,14 @@
+{
+  "addressing_models": {
+    "Logical": 0,
+    "Physical32": 1,
+    "Physical64": 2,
+    "PhysicalStorageBuffer64": 5348
+  },
+  "memory_models": {
+    "Simple": 0,
+    "GLSL450": 1,
+    "OpenCL": 2,
+    "Vulkan": 3
+  }
+}
