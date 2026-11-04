@@ -1,0 +1,11 @@
+{
+  "OpDPdx": 207,
+  "OpDPdy": 208,
+  "OpFwidth": 209,
+  "OpDPdxFine": 210,
+  "OpDPdyFine": 211,
+  "OpFwidthFine": 212,
+  "OpDPdxCoarse": 213,
+  "OpDPdyCoarse": 214,
+  "OpFwidthCoarse": 215
+}
