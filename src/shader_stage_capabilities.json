@@ -1,0 +1,8 @@
+{
+  "Vertex": "Shader",
+  "Fragment": "Shader",
+  "GLCompute": "Shader",
+  "Geometry": "Geometry",
+  "TessellationControl": "Tessellation",
+  "TessellationEvaluation": "Tessellation"
+}
