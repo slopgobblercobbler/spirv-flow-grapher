@@ -1,0 +1,7 @@
+{
+  "OpCompositeConstruct": 80,
+  "OpCompositeExtract": 81,
+  "OpCompositeInsert": 82,
+  "OpCopyObject": 83,
+  "OpTranspose": 84
+}
