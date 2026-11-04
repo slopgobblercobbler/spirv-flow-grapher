@@ -1,0 +1,17 @@
+{
+  "OpAtomicLoad": 227,
+  "OpAtomicStore": 228,
+  "OpAtomicExchange": 229,
+  "OpAtomicCompareExchange": 230,
+  "OpAtomicIIncrement": 232,
+  "OpAtomicIDecrement": 233,
+  "OpAtomicIAdd": 234,
+  "OpAtomicISub": 235,
+  "OpAtomicSMin": 236,
+  "OpAtomicUMin": 237,
+  "OpAtomicSMax": 238,
+  "OpAtomicUMax": 239,
+  "OpAtomicAnd": 240,
+  "OpAtomicOr": 241,
+  "OpAtomicXor": 242
+}
