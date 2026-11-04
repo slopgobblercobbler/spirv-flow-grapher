@@ -1,0 +1,9 @@
+{
+  "OpGroupNonUniformElect": 333,
+  "OpGroupNonUniformAll": 334,
+  "OpGroupNonUniformAny": 335,
+  "OpGroupNonUniformAllEqual": 336,
+  "OpGroupNonUniformBroadcast": 337,
+  "OpGroupNonUniformBroadcastFirst": 338,
+  "OpGroupNonUniformBallot": 339
+}
