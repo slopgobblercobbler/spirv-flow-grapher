@@ -1,0 +1,5 @@
+{
+  "GLSL_std_450": "GLSL.std.450",
+  "OpenCL_std": "OpenCL.std",
+  "SPV_AMD_shader": "SPV_AMD_shader_explicit_vertex_parameter"
+}
