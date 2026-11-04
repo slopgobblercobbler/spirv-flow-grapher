@@ -1,0 +1,11 @@
+{
+  "OpConvertFToU": 109,
+  "OpConvertFToS": 110,
+  "OpConvertSToF": 111,
+  "OpConvertUToF": 112,
+  "OpUConvert": 113,
+  "OpSConvert": 114,
+  "OpFConvert": 115,
+  "OpQuantizeToF16": 116,
+  "OpBitcast": 124
+}
