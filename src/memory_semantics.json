@@ -1,0 +1,13 @@
+{
+  "None": 0,
+  "Acquire": 2,
+  "Release": 4,
+  "AcquireRelease": 8,
+  "SequentiallyConsistent": 16,
+  "UniformMemory": 64,
+  "SubgroupMemory": 128,
+  "WorkgroupMemory": 256,
+  "CrossWorkgroupMemory": 512,
+  "AtomicCounterMemory": 1024,
+  "ImageMemory": 2048
+}
