@@ -1,0 +1,14 @@
+{
+  "OpShiftRightLogical": 194,
+  "OpShiftRightArithmetic": 195,
+  "OpShiftLeftLogical": 196,
+  "OpBitwiseOr": 197,
+  "OpBitwiseXor": 198,
+  "OpBitwiseAnd": 199,
+  "OpNot": 200,
+  "OpBitFieldInsert": 201,
+  "OpBitFieldSExtract": 202,
+  "OpBitFieldUExtract": 203,
+  "OpBitReverse": 204,
+  "OpBitCount": 205
+}
