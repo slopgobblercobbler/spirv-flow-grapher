@@ -1,0 +1,10 @@
+{
+  "None": 0,
+  "Unroll": 1,
+  "DontUnroll": 2,
+  "DependencyInfinite": 4,
+  "DependencyLength": 8,
+  "MinIterations": 16,
+  "MaxIterations": 32,
+  "IterationMultiple": 64
+}
