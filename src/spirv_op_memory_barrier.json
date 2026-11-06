@@ -1,0 +1,6 @@
+{
+  "opcode": "OpMemoryBarrier",
+  "opcode_id": 225,
+  "memory_scope_index": 0,
+  "memory_semantics_index": 1
+}
