@@ -1,0 +1,6 @@
+{
+  "OpAsin": 15,
+  "OpAcos": 16,
+  "OpAtan": 17,
+  "OpAtan2": 25
+}
