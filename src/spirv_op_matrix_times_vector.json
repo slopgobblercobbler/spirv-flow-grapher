@@ -1,5 +1,12 @@
 {
-  "OpMatrixTimesVector": 145,
-  "OpVectorTimesMatrix": 146,
-  "OpMatrixTimesMatrix": 147
+  "OpMatrixTimesVector": {
+    "opcode": 145,
+    "class": "Arithmetic",
+    "operands": [
+      "ResultType",
+      "ResultId",
+      "Matrix",
+      "Vector"
+    ]
+  }
 }
