@@ -1,0 +1,7 @@
+{
+  "opcode": "OpBitReverse",
+  "opcode_id": 204,
+  "has_result": true,
+  "operand_index": 2,
+  "preserves_word_width": true
+}
