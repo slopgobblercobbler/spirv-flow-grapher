@@ -1,0 +1,6 @@
+{
+  "opcode": "OpUMod",
+  "opcode_id": 133,
+  "has_result": true,
+  "unsigned_modulo": true
+}
