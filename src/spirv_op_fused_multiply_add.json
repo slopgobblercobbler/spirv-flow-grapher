@@ -1,0 +1,6 @@
+{
+  "OpFMul": 133,
+  "OpFAdd": 129,
+  "OpExtInst_FMA": 50,
+  "fma_precision": "IEEE754_FUSED"
+}
