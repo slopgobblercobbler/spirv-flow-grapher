@@ -1,0 +1,14 @@
+{
+  "OpAtomicAnd": {
+    "opcode": 235,
+    "class": "Atomic"
+  },
+  "OpAtomicOr": {
+    "opcode": 236,
+    "class": "Atomic"
+  },
+  "OpAtomicXor": {
+    "opcode": 237,
+    "class": "Atomic"
+  }
+}
