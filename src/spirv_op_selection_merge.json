@@ -1,0 +1,6 @@
+{
+  "opcode": "OpSelectionMerge",
+  "opcode_id": 247,
+  "merge_block_index": 0,
+  "selection_control_mask_index": 1
+}
