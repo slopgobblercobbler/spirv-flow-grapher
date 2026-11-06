@@ -1,0 +1,6 @@
+{
+  "OpSubgroupReadInvocationKHR": 4432,
+  "OpSubgroupAllKHR": 4428,
+  "OpSubgroupAnyKHR": 4429,
+  "OpSubgroupAllEqualKHR": 4430
+}
