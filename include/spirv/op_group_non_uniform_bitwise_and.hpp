@@ -4,8 +4,8 @@
 
 namespace spirv {
 struct OpGroupNonUniformBitwiseAndDef {
-    static constexpr std::uint32_t opcode = 354;
+    static constexpr std::uint32_t opcode = 358;
     static constexpr std::string_view name = "OpGroupNonUniformBitwiseAnd";
-    static constexpr std::uint32_t group_operation_idx = 4;
+    static constexpr std::string_view desc = "Bitwise AND reduction across active group invocations";
 };
 }
