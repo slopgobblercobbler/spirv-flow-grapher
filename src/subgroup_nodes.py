@@ -19,3 +19,6 @@ def op_fadd_reduction(val: str) -> dict:
 
 def op_imul_reduction(val: str) -> dict:
     return {'op': 'OpGroupNonUniformIMul', 'val': val}
+
+def op_fmul_reduction(val: str) -> dict:
+    return {'op': 'OpGroupNonUniformFMul', 'val': val}
