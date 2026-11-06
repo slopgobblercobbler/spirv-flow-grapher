@@ -1,0 +1,6 @@
+{
+  "opcode": "OpSMod",
+  "opcode_id": 134,
+  "has_result": true,
+  "signed_modulo": true
+}
