@@ -1,0 +1,7 @@
+{
+  "opcode": "OpULessThan",
+  "opcode_id": 170,
+  "has_result": true,
+  "has_result_type": true,
+  "unsigned_comparison": true
+}
