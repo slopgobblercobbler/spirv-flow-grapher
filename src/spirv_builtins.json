@@ -1,0 +1,12 @@
+{
+  "Position": 0,
+  "PointSize": 1,
+  "ClipDistance": 3,
+  "VertexId": 5,
+  "InstanceId": 6,
+  "PrimitiveId": 7,
+  "FragCoord": 15,
+  "PointCoord": 16,
+  "FrontFacing": 17,
+  "GlobalInvocationId": 28
+}
