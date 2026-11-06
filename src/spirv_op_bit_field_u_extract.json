@@ -1,0 +1,9 @@
+{
+  "opcode": "OpBitFieldUExtract",
+  "opcode_id": 203,
+  "has_result": true,
+  "base_operand_index": 2,
+  "offset_operand_index": 3,
+  "count_operand_index": 4,
+  "zero_extends": true
+}
