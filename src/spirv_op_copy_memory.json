@@ -1,6 +1,15 @@
 {
-  "opcode": "OpCopyMemory",
-  "opcode_id": 63,
-  "supports_dual_memory_operands": true,
-  "min_operands": 2
+  "OpCopyMemory": {
+    "opcode": 47,
+    "class": "Memory",
+    "operands": [
+      "Target",
+      "Source",
+      "MemoryAccess"
+    ]
+  },
+  "OpCopyMemorySized": {
+    "opcode": 48,
+    "class": "Memory"
+  }
 }
