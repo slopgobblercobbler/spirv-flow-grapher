@@ -1,0 +1,10 @@
+{
+  "opcode": "OpAtomicIAdd",
+  "opcode_id": 227,
+  "has_result": true,
+  "has_result_type": true,
+  "pointer_operand_index": 2,
+  "scope_operand_index": 3,
+  "semantics_operand_index": 4,
+  "value_operand_index": 5
+}
