@@ -6,6 +6,6 @@ namespace spirv {
 struct OpGroupNonUniformQuadBroadcastDef {
     static constexpr std::uint32_t opcode = 364;
     static constexpr std::string_view name = "OpGroupNonUniformQuadBroadcast";
-    static constexpr std::uint32_t index_in_quad_idx = 5;
+    static constexpr std::string_view desc = "Broadcast value from specified quad lane within 2x2 cluster";
 };
 }
