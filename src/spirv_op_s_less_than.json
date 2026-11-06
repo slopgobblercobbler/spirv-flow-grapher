@@ -1,0 +1,7 @@
+{
+  "opcode": "OpSLessThan",
+  "opcode_id": 176,
+  "has_result": true,
+  "has_result_type": true,
+  "signed_comparison": true
+}
