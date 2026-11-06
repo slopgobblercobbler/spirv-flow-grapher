@@ -1,0 +1,10 @@
+{
+  "OpAtomicIAdd": {
+    "opcode": 228,
+    "class": "Atomic"
+  },
+  "OpAtomicISub": {
+    "opcode": 229,
+    "class": "Atomic"
+  }
+}
