@@ -1,0 +1,5 @@
+{
+  "OpQuantizeToF16": 111,
+  "OpRoundEven": 108,
+  "OpTrunc": 109
+}
