@@ -1,0 +1,6 @@
+{
+  "opcode": "OpSGreaterThanEqual",
+  "opcode_id": 179,
+  "has_result": true,
+  "signed_comparison": true
+}
