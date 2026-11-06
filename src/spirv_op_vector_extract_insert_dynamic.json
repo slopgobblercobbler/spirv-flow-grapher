@@ -1,0 +1,10 @@
+{
+  "OpVectorExtractDynamic": {
+    "opcode": 77,
+    "class": "Composite"
+  },
+  "OpVectorInsertDynamic": {
+    "opcode": 78,
+    "class": "Composite"
+  }
+}
