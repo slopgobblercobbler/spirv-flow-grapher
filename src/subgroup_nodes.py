@@ -13,3 +13,6 @@ def op_shuffle_down(src: str, delta: str) -> dict:
 
 def op_iadd_reduction(val: str) -> dict:
     return {'op': 'OpGroupNonUniformIAdd', 'val': val}
+
+def op_fadd_reduction(val: str) -> dict:
+    return {'op': 'OpGroupNonUniformFAdd', 'val': val}
