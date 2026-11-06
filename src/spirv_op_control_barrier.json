@@ -1,7 +1,6 @@
 {
-  "opcode": "OpControlBarrier",
-  "opcode_id": 224,
-  "execution_scope_index": 0,
-  "memory_scope_index": 1,
-  "memory_semantics_index": 2
+  "OpControlBarrier": 224,
+  "OpMemoryBarrier": 225,
+  "ExecutionScope_Workgroup": 2,
+  "MemorySemantics_AcquireRelease": 8
 }
