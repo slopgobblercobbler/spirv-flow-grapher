@@ -7,3 +7,6 @@ def op_shuffle_xor(src: str, mask: str) -> dict:
 
 def op_shuffle_up(src: str, delta: str) -> dict:
     return {'op': 'OpGroupNonUniformShuffleUp', 'src': src, 'delta': delta}
+
+def op_shuffle_down(src: str, delta: str) -> dict:
+    return {'op': 'OpGroupNonUniformShuffleDown', 'src': src, 'delta': delta}
