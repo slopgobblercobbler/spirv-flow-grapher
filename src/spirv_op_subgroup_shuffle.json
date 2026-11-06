@@ -1,0 +1,6 @@
+{
+  "OpSubgroupShuffleINTEL": 5571,
+  "OpSubgroupShuffleDownINTEL": 5572,
+  "OpSubgroupShuffleUpINTEL": 5573,
+  "OpSubgroupShuffleXorINTEL": 5574
+}
