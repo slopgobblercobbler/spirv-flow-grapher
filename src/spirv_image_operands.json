@@ -1,0 +1,10 @@
+{
+  "Bias": "0x0001",
+  "Lod": "0x0002",
+  "Grad": "0x0004",
+  "ConstOffset": "0x0008",
+  "Offset": "0x0010",
+  "ConstOffsets": "0x0020",
+  "Sample": "0x0040",
+  "MinLod": "0x0100"
+}
