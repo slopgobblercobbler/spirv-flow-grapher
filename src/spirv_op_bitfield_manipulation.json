@@ -1,0 +1,14 @@
+{
+  "OpBitFieldInsert": {
+    "opcode": 201,
+    "class": "Bitwise"
+  },
+  "OpBitFieldSExtract": {
+    "opcode": 202,
+    "class": "Bitwise"
+  },
+  "OpBitFieldUExtract": {
+    "opcode": 203,
+    "class": "Bitwise"
+  }
+}
