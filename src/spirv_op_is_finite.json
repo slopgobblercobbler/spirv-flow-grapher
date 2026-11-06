@@ -1,0 +1,6 @@
+{
+  "opcode": "OpIsFinite",
+  "opcode_id": 158,
+  "has_result": true,
+  "operand_index": 2
+}
