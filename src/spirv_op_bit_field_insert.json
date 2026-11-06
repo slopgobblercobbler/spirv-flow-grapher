@@ -1,0 +1,10 @@
+{
+  "opcode": "OpBitFieldInsert",
+  "opcode_id": 201,
+  "has_result": true,
+  "has_result_type": true,
+  "base_operand_index": 2,
+  "insert_operand_index": 3,
+  "offset_operand_index": 4,
+  "count_operand_index": 5
+}
