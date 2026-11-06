@@ -1,0 +1,7 @@
+{
+  "opcode": "OpVectorShuffle",
+  "opcode_id": 79,
+  "min_components": 2,
+  "max_components": 4,
+  "undef_component_sentinel": "0xFFFFFFFF"
+}
