@@ -1,0 +1,12 @@
+{
+  "OpMatrixTimesMatrix": {
+    "opcode": 146,
+    "class": "Arithmetic",
+    "operands": [
+      "ResultType",
+      "ResultId",
+      "LeftMatrix",
+      "RightMatrix"
+    ]
+  }
+}
