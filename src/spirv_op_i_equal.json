@@ -1,0 +1,8 @@
+{
+  "opcode": "OpIEqual",
+  "opcode_id": 166,
+  "has_result": true,
+  "has_result_type": true,
+  "operand_1_index": 2,
+  "operand_2_index": 3
+}
