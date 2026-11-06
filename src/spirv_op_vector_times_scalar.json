@@ -1,0 +1,12 @@
+{
+  "OpVectorTimesScalar": {
+    "opcode": 142,
+    "class": "Arithmetic",
+    "operands": [
+      "ResultType",
+      "ResultId",
+      "Vector",
+      "Scalar"
+    ]
+  }
+}
