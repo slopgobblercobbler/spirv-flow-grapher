@@ -1,5 +1,11 @@
 {
-  "OpQuantizeToF16": 111,
-  "OpRoundEven": 108,
-  "OpTrunc": 109
+  "OpQuantizeToF16": {
+    "opcode": 111,
+    "class": "Arithmetic",
+    "operands": [
+      "ResultType",
+      "ResultId",
+      "Value"
+    ]
+  }
 }
