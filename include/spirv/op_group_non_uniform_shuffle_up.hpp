@@ -4,8 +4,8 @@
 
 namespace spirv {
 struct OpGroupNonUniformShuffleUpDef {
-    static constexpr std::uint32_t opcode = 362;
+    static constexpr std::uint32_t opcode = 346;
     static constexpr std::string_view name = "OpGroupNonUniformShuffleUp";
-    static constexpr std::uint32_t delta_idx = 5;
+    static constexpr std::string_view desc = "Shuffle value from invocation with relative delta index upward";
 };
 }
