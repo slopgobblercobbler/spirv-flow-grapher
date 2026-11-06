@@ -1,0 +1,8 @@
+{
+  "opcode": "OpAtomicCompareExchange",
+  "opcode_id": 230,
+  "equal_semantics_operand_index": 4,
+  "unequal_semantics_operand_index": 5,
+  "value_operand_index": 6,
+  "comparator_operand_index": 7
+}
