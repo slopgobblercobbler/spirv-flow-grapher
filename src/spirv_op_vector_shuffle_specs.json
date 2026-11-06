@@ -1,0 +1,6 @@
+{
+  "OpVectorShuffle": 79,
+  "OpCompositeConstruct": 80,
+  "OpCompositeExtract": 81,
+  "OpCompositeInsert": 82
+}
