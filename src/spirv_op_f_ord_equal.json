@@ -1,0 +1,9 @@
+{
+  "opcode": "OpFOrdEqual",
+  "opcode_id": 180,
+  "has_result": true,
+  "has_result_type": true,
+  "operand_1_index": 2,
+  "operand_2_index": 3,
+  "ordered": true
+}
