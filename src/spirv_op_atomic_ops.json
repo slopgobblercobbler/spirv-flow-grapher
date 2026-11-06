@@ -1,0 +1,6 @@
+{
+  "OpAtomicLoad": 227,
+  "OpAtomicStore": 228,
+  "OpAtomicExchange": 229,
+  "OpAtomicCompareExchange": 230
+}
