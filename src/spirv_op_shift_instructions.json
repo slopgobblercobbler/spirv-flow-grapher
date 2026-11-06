@@ -1,0 +1,14 @@
+{
+  "OpShiftRightLogical": {
+    "opcode": 194,
+    "class": "Bitwise"
+  },
+  "OpShiftRightArithmetic": {
+    "opcode": 195,
+    "class": "Bitwise"
+  },
+  "OpShiftLeftLogical": {
+    "opcode": 196,
+    "class": "Bitwise"
+  }
+}
