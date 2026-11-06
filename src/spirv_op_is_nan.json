@@ -1,0 +1,8 @@
+{
+  "opcode": "OpIsNan",
+  "opcode_id": 156,
+  "has_result": true,
+  "has_result_type": true,
+  "operand_index": 2,
+  "requires_float": true
+}
