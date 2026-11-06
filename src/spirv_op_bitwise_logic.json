@@ -1,0 +1,14 @@
+{
+  "OpBitwiseAnd": {
+    "opcode": 197,
+    "class": "Bitwise"
+  },
+  "OpBitwiseOr": {
+    "opcode": 198,
+    "class": "Bitwise"
+  },
+  "OpBitwiseXor": {
+    "opcode": 199,
+    "class": "Bitwise"
+  }
+}
