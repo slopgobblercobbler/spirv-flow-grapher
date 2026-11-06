@@ -1,0 +1,18 @@
+{
+  "OpAtomicSMin": {
+    "opcode": 230,
+    "class": "Atomic"
+  },
+  "OpAtomicSMax": {
+    "opcode": 231,
+    "class": "Atomic"
+  },
+  "OpAtomicUMin": {
+    "opcode": 232,
+    "class": "Atomic"
+  },
+  "OpAtomicUMax": {
+    "opcode": 233,
+    "class": "Atomic"
+  }
+}
