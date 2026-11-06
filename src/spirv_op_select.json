@@ -1,0 +1,9 @@
+{
+  "opcode": "OpSelect",
+  "opcode_id": 169,
+  "has_result": true,
+  "has_result_type": true,
+  "condition_operand_index": 2,
+  "object_1_index": 3,
+  "object_2_index": 4
+}
