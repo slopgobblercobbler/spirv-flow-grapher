@@ -25,3 +25,6 @@ def op_fmul_reduction(val: str) -> dict:
 
 def op_smin_reduction(val: str) -> dict:
     return {'op': 'OpGroupNonUniformSMin', 'val': val}
+
+def op_smax_reduction(val: str) -> dict:
+    return {'op': 'OpGroupNonUniformSMax', 'val': val}
