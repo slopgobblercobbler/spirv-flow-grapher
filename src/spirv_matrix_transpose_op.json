@@ -1,0 +1,16 @@
+{
+  "opcode": "OpTranspose",
+  "opcode_id": 84,
+  "operand_composite": "IdResultType",
+  "supported_dims": [
+    "2x2",
+    "2x3",
+    "2x4",
+    "3x2",
+    "3x3",
+    "3x4",
+    "4x2",
+    "4x3",
+    "4x4"
+  ]
+}
