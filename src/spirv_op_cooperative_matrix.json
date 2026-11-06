@@ -1,0 +1,5 @@
+{
+  "OpCooperativeMatrixLoadNV": 5338,
+  "OpCooperativeMatrixStoreNV": 5339,
+  "OpCooperativeMatrixMulAddNV": 5340
+}
