@@ -1,0 +1,6 @@
+{
+  "OpSpecConstant": 50,
+  "OpSpecConstantTrue": 48,
+  "OpSpecConstantFalse": 49,
+  "OpSpecConstantComposite": 51
+}
