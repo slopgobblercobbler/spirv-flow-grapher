@@ -1,0 +1,10 @@
+{
+  "OpAtomicLoad": {
+    "opcode": 227,
+    "class": "Atomic"
+  },
+  "OpAtomicStore": {
+    "opcode": 228,
+    "class": "Atomic"
+  }
+}
