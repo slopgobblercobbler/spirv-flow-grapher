@@ -1,0 +1,7 @@
+{
+  "opcode": "OpLoopMerge",
+  "opcode_id": 246,
+  "merge_block_index": 0,
+  "continue_target_index": 1,
+  "loop_control_mask_index": 2
+}
