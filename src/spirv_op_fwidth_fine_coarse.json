@@ -1,0 +1,14 @@
+{
+  "OpDPdxFine": {
+    "opcode": 207,
+    "class": "Derivative"
+  },
+  "OpDPdyFine": {
+    "opcode": 208,
+    "class": "Derivative"
+  },
+  "OpFwidthFine": {
+    "opcode": 209,
+    "class": "Derivative"
+  }
+}
