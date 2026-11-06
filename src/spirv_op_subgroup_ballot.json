@@ -1,0 +1,5 @@
+{
+  "OpSubgroupBallotKHR": 4421,
+  "OpSubgroupFirstInvocationKHR": 4422,
+  "OpSubgroupReadInvocationKHR": 4432
+}
