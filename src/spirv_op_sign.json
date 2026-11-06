@@ -1,0 +1,10 @@
+{
+  "OpFSign": {
+    "opcode": 128,
+    "class": "GLSL.std.450"
+  },
+  "OpSSign": {
+    "opcode": 129,
+    "class": "GLSL.std.450"
+  }
+}
