@@ -1,0 +1,6 @@
+{
+  "opcode": "OpCompositeConstruct",
+  "opcode_id": 80,
+  "allows_nested_composites": true,
+  "min_operands": 1
+}
