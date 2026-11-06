@@ -1,0 +1,12 @@
+{
+  "OpOuterProduct": {
+    "opcode": 147,
+    "class": "Arithmetic",
+    "operands": [
+      "ResultType",
+      "ResultId",
+      "Vector1",
+      "Vector2"
+    ]
+  }
+}
