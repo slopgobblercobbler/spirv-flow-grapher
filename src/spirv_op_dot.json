@@ -1,0 +1,12 @@
+{
+  "OpDot": {
+    "opcode": 148,
+    "class": "Arithmetic",
+    "operands": [
+      "ResultType",
+      "ResultId",
+      "Vector1",
+      "Vector2"
+    ]
+  }
+}
