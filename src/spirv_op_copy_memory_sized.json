@@ -1,0 +1,6 @@
+{
+  "opcode": "OpCopyMemorySized",
+  "opcode_id": 64,
+  "size_operand_index": 2,
+  "min_operands": 3
+}
