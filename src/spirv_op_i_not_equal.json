@@ -1,0 +1,7 @@
+{
+  "opcode": "OpINotEqual",
+  "opcode_id": 167,
+  "has_result": true,
+  "operand_1_index": 2,
+  "operand_2_index": 3
+}
