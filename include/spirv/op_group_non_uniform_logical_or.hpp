@@ -4,8 +4,8 @@
 
 namespace spirv {
 struct OpGroupNonUniformLogicalOrDef {
-    static constexpr std::uint32_t opcode = 358;
+    static constexpr std::uint32_t opcode = 362;
     static constexpr std::string_view name = "OpGroupNonUniformLogicalOr";
-    static constexpr std::uint32_t group_operation_idx = 4;
+    static constexpr std::string_view desc = "Logical OR reduction across active group boolean values";
 };
 }
