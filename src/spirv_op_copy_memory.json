@@ -1,0 +1,6 @@
+{
+  "opcode": "OpCopyMemory",
+  "opcode_id": 63,
+  "supports_dual_memory_operands": true,
+  "min_operands": 2
+}
