@@ -1,0 +1,7 @@
+{
+  "opcode": "OpIsInf",
+  "opcode_id": 157,
+  "has_result": true,
+  "operand_index": 2,
+  "supports_vector_float": true
+}
