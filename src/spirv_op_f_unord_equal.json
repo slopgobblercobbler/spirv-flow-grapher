@@ -1,0 +1,6 @@
+{
+  "opcode": "OpFUnordEqual",
+  "opcode_id": 181,
+  "has_result": true,
+  "ordered": false
+}
