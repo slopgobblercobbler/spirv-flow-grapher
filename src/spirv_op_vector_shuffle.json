@@ -1,0 +1,13 @@
+{
+  "OpVectorShuffle": {
+    "opcode": 79,
+    "class": "Composite",
+    "operands": [
+      "ResultType",
+      "ResultId",
+      "Vector1",
+      "Vector2",
+      "Components"
+    ]
+  }
+}
