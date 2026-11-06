@@ -1,0 +1,6 @@
+{
+  "opcode": "OpPhi",
+  "opcode_id": 245,
+  "has_result": true,
+  "variable_pairs_start_index": 2
+}
