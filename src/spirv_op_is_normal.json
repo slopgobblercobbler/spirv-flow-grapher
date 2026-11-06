@@ -1,0 +1,6 @@
+{
+  "opcode": "OpIsNormal",
+  "opcode_id": 159,
+  "has_result": true,
+  "operand_index": 2
+}
