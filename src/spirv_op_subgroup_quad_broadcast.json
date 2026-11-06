@@ -1,0 +1,6 @@
+{
+  "OpGroupQuadBroadcastKHR": 4426,
+  "OpGroupQuadSwapHorizontalKHR": 4427,
+  "OpGroupQuadSwapVerticalKHR": 4428,
+  "OpGroupQuadSwapDiagonalKHR": 4429
+}
