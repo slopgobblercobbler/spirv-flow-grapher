@@ -1,0 +1,20 @@
+{
+  "OpIsNan": {
+    "opcode": 156,
+    "class": "RelationalAndLogical",
+    "operands": [
+      "ResultType",
+      "ResultId",
+      "x"
+    ]
+  },
+  "OpIsInf": {
+    "opcode": 157,
+    "class": "RelationalAndLogical",
+    "operands": [
+      "ResultType",
+      "ResultId",
+      "x"
+    ]
+  }
+}
